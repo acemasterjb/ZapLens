@@ -1,14 +1,12 @@
-![Checks](https://github.com/tellor-io/lens/workflows/Checks/badge.svg)
-
-Deploy on Rinkeby
+Deploy on BSC Testnet
 ```
-hardhat deploy --network rinkeby  --oracle-address 0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0
+hardhat deploy --network testnet  --oracle-address 0xBB1EbB02C6fD085B29f51a4817AA82030f17A3D6
 ```
 
 
-Deploy on Mainnet
+Deploy on BSC Mainnet
 ```
-hardhat deploy --network mainnet --oracle-address 0x88dF592F8eb5D7Bd38bFeF7dEb0fBc02cf3778a0
+hardhat deploy --network mainnet --oracle-address 0xBB1EbB02C6fD085B29f51a4817AA82030f17A3D6
 ```
 
 For any strange errors

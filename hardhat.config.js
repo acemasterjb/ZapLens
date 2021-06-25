@@ -17,11 +17,11 @@ task("deploy", "Deploy and verify the contracts")
   .setAction(async taskArgs => {
     var oracleAddress = taskArgs.oracleAddress
     await run("compile");
-    const t = await ethers.getContractFactory("Main");
+    const t = await ethers.getContractFactory("Aggregator");
     const contract = await t.deploy(oracleAddress);
     await contract.deployed();
-    console.log("contract deployed to:", "https://" + taskArgs.network + ".etherscan.io/address/" + contract.address);
-    console.log("    transaction hash:", "https://" + taskArgs.network + ".etherscan.io/tx/" + contract.deployTransaction.hash);
+    console.log("contract deployed to:", "https://" + taskArgs.network + ".bscscan.io/address/" + contract.address);
+    console.log("    transaction hash:", "https://" + taskArgs.network + ".bscscan.io/tx/" + contract.deployTransaction.hash);
 
     // Wait for few confirmed transactions.
     // Otherwise the etherscan api doesn't find the deployed contract.
@@ -48,12 +48,12 @@ module.exports = {
   networks: {
     hardhat: {
     },
-    rinkeby: {
-      url: `${process.env.NODE_URL_RINKEBY}`,
+    testnet: {
+      url: `${process.env.NODE_URL_TESTNET}`,
       accounts: [process.env.PRIVATE_KEY]
     },
     mainnet: {
-      url: `${process.env.NODE_URL_MAINNET}`,
+      url: `${process.env.NODE_URL_SMARTCHAIN}`,
       accounts: [process.env.PRIVATE_KEY]
     }
   },

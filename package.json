@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "tellorcore": "git://github.com/tellor-io/TellorCore.git#V2.5.0",
     "tellorlegacy": "^1.1.2"
   },
   "devDependencies": {
@@ -26,7 +25,6 @@
     "ethers": "^5.0.30",
     "hardhat": "^2.0.10",
     "hardhat-log-remover": "^2.0.0",
-    "mocha": "^8.2.1",
-    "usingtellor": "github:tellor-io/usingtellor#master"
+    "mocha": "^8.2.1"
   }
 }

@@ -67,6 +67,11 @@ contract Aggregator is ZapApi {
         _;
     }
 
+    function destroy() external onlyAdmin {
+        address payable owner = address(uint160(admin));
+        selfdestruct(owner);
+    }
+
     function setOracle(address _oracle) external onlyAdmin {
         oracle = Oracle(_oracle);
     }

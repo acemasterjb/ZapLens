@@ -4,7 +4,6 @@ pragma solidity ^0.7.6;
 pragma experimental ABIEncoderV2;
 
 import "./ZapApi.sol";
-import "hardhat/console.sol";
 
 interface Oracle {
     function getUintVar(bytes32 _data) external view returns (uint256);

@@ -1,0 +1,50 @@
+
+[
+    {
+        
+        "name": "ZapTransfer",
+        "address": "0x84b4cf775552FFaD4512F245d24207e2d3D4Fc42",
+        "arguments": [],
+        "libraries": {}
+    },
+    {
+        
+        "name": "ZapLibrary",
+        "address": "0x530303C5AfEe6c3711E48BCa07e4FBEb31085359",
+        "arguments": [],
+        "libraries": {
+            "ZapTransfer": "0x84b4cf775552FFaD4512F245d24207e2d3D4Fc42"
+        }
+    },
+    {
+        
+        "name": "ZapDispute",
+        "address": "0x60Ef69971725083eF82f612FB4a2cdC2ed3aAfE9",
+        "arguments": [],
+        "libraries": {
+            "ZapTransfer": "0x84b4cf775552FFaD4512F245d24207e2d3D4Fc42"
+        }
+    },
+    {
+        
+        "name": "ZapStake",
+        "address": "0xe94Ba144a728EF0D4C4Fc9844FBCc92038d3da8E",
+        "arguments": [],
+        "libraries": {
+            "ZapTransfer": "0x84b4cf775552FFaD4512F245d24207e2d3D4Fc42",
+            "ZapDispute": "0x60Ef69971725083eF82f612FB4a2cdC2ed3aAfE9"
+        }
+    },
+    {
+        
+        "name": "ZapOps",
+        "oldaddress": "0x6F58e848477bf5A2306268FA8d45D7C466CDf232",
+        "address": "0xE7aF8A0e0f4c0806DAB4FE93dCDa79fABDB33A8E",
+        "arguments": ["0x09d8af358636d9bcc9a3e177b66eb30381a4b1a8"],
+        "libraries": {
+            "ZapStake": "0xe94Ba144a728EF0D4C4Fc9844FBCc92038d3da8E",
+            "ZapDispute": "0x60Ef69971725083eF82f612FB4a2cdC2ed3aAfE9",
+            "ZapLibrary": "0x530303C5AfEe6c3711E48BCa07e4FBEb31085359"
+        }
+    }
+]
